@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Demo4T'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of Demo4T.'
+  s.summary          = 'VNP 4T.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,26 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/lu.ho@aegona.com/Demo4T'
+  s.homepage         = 'https://github.com/luhoaegona/Demo4T'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'lu.ho@aegona.com' => 'lu.ho@aegona.com' }
-  s.source           = { :git => 'https://github.com/lu.ho@aegona.com/Demo4T.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/luhoaegona/Demo4T.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '12.0'
 
-  s.source_files = 'Demo4T/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'Demo4T' => ['Demo4T/Assets/*.png']
-  # }
+  s.source_files = 'Source/**/*.swift'
+  s.platform     = :ios
+#   s.resource_bundles = {
+#     'Demo4T' => ['Demo4T/Assets/*.png']
+#   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
+
+  s.swift_version = '5.0'
+    
+# s.public_header_files = 'Pod/Classes/**/*.h'
+   s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'RxSwift', '~> 5'
 end
